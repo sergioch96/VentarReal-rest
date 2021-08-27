@@ -22,7 +22,7 @@ namespace WSVenta.Models
         public virtual DbSet<Concepto> Concepto { get; set; }
         public virtual DbSet<Producto> Producto { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
-        public virtual DbSet<Ventum> Venta { get; set; }
+        public virtual DbSet<Venta> Venta { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -132,7 +132,7 @@ namespace WSVenta.Models
                     .HasColumnName("password");
             });
 
-            modelBuilder.Entity<Ventum>(entity =>
+            modelBuilder.Entity<Venta>(entity =>
             {
                 entity.ToTable("venta");
 

@@ -69,6 +69,7 @@ namespace WSVenta
                                                   .AllowAnyMethod())
             );
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IVentaService, VentaService>();
 
             var appSettingsSection = Configuration.GetSection("AppSettings");
             services.Configure<AppSettings>(appSettingsSection);
